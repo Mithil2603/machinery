@@ -130,7 +130,14 @@
 
 .container-fluid {
     background-color: #F2F0F1;
+    
+}
 
+.form-control1 {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 150%;
 }
 
 .full-height {
@@ -270,7 +277,7 @@ hr {
 }
 
 @media (max-width: 768px) {
-    
+
     .feedback-list {
         display: block;
     }
@@ -278,28 +285,81 @@ hr {
 
 footer {
     background-color: #000;
-    color: #ffffff;
-    padding: 3rem;
+    /* Dark background */
+    color: #fff;
+    /* White text for contrast */
+    padding: 3rem 0;
     border-radius: 1rem;
-    width: 100%;
 }
 
 footer h1 {
-    width: 50%;
+    font-size: 2rem;
+    /* Scalable heading */
+    line-height: 1.5;
 }
 
-footer form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+footer form input,
+footer form textarea {
+    max-width: 100%;
+    /* Ensure inputs don't overflow */
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1rem;
 }
 
-.inputfield {
-    border-radius: .5rem;
-    padding: .5rem 1rem;
-    width: 70%;
-    outline: none;
-    border: none;
+footer form button {
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design Tweaks */
+@media (min-width: 768px) {
+    footer h1 {
+        font-size: 2.5rem;
+        /* Larger text on wider screens */
+    }
+
+    footer form {
+        max-width: 450px;
+        /* Restrict form width */
+    }
+
+    footer form button {
+        width: auto;
+        /* Prevent button stretching on larger screens */
+    }
+}
+
+.form-control {
+    background-color: white;
+    max-width: inherit;
+}
+
+.form-control:hover {
+    background-color: white;
+}
+
+.form-control:focus {
+    background-color: white;
+}
+
+
+.company-info {
+    background-color: #F2F0F1;
+    padding: 2rem 0;
+}
+
+.width-100 {
+    width: 100vw;
+}
+
+.font-2x {
+    font-size: 3rem;
+}
+
+.bottom-shadow {
+    box-sizing: border-box;
+    border-top: 1px solid #000;
 }

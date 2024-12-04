@@ -106,34 +106,78 @@ export default function LandingPage() {
               <p>No feedbacks available.</p>
             )}
           </div>
-          <footer>
-            <div className="inquiry d-flex justify-content-between align-items-center gap-3">
-              <h1>Have a Question? We're Here to Help!</h1>
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="email"
-                  name="email"
-                  className="inputfield"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <textarea
-                  name="inquiry"
-                  className="inputfield mt-3"
-                  placeholder="Enter your query"
-                  value={inquiry}
-                  onChange={(e) => setInquiry(e.target.value)}
-                  required
-                />
-                <button type="submit" className="btn btn-outline-light mt-3">
-                  Submit Inquiry
-                </button>
-              </form>
-              {responseMessage && <p>{responseMessage}</p>}
+
+          <footer className="container-fluid bg-dark text-white py-5">
+            <div className="container">
+              <div className="row align-items-center justify-content-center text-center text-md-start">
+                {/* Heading Section */}
+                <div className="col-12 col-md-6 mb-4 mb-md-0">
+                  <h1 className="display-5 fw-bold">
+                    Have a Question? We're Here to Help!
+                  </h1>
+                </div>
+                {/* Form Section */}
+                <div className="col-12 col-md-6">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="d-flex flex-column align-items-center"
+                  >
+                    <input
+                      type="email"
+                      name="email"
+                      className="form-control mb-3 w-100"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                    <textarea
+                      name="inquiry"
+                      className="form-control mb-3 w-100"
+                      placeholder="Enter your query"
+                      value={inquiry}
+                      onChange={(e) => setInquiry(e.target.value)}
+                      rows="4"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="btn btn-outline-light w-100 w-md-auto"
+                    >
+                      Submit Inquiry
+                    </button>
+                  </form>
+                  {responseMessage && <p className="mt-3">{responseMessage}</p>}
+                </div>
+              </div>
             </div>
           </footer>
+        </div>
+      </div>
+      <div className="container-fluid bottom-shadow">
+        <div className="container company-info d-flex justify-content-between align-items-center gap-3 mt-5 flex-wrap">
+          <div className="about">
+            <h3 className="navbar-brand main-title font-2x">
+              RADHE ENTERPRISE
+            </h3>
+            <p>
+              We have creels that helps your business to make reach new heights.
+            </p>
+          </div>
+          <div className="links">
+            <h5 className="mb-3">COMPANY</h5>
+            <p>About</p>
+            <p>Features</p>
+            <p>Works</p>
+            <p>Career</p>
+          </div>
+          <div className="links">
+            <h5 className="mb-3">Help</h5>
+            <p>Customer Support</p>
+            <p>Delivery Details</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
         </div>
       </div>
     </>

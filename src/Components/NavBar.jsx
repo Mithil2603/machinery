@@ -24,7 +24,7 @@ export default function NavBar() {
             </svg>
         </p>
     </div>
-    <nav className="navbar navbar-expand-lg bg-body-nav">
+    <nav className="navbar navbar-expand-lg bg-body-nav shadow">
         <div className="container">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -58,7 +58,7 @@ export default function NavBar() {
                 <div className="d-flex gap-3 align-items-center flex-wrap">
                     <form className="d-flex search-bar" role="search">
                         <button className="btn btn-light" type="submit"><img src={Search_icon} alt='search_icon'/></button>
-                        <input className="form-control me-2" type="search" placeholder="Search Products"
+                        <input className="form-control1 me-2 transparent" type="search" placeholder="Search Products"
                             aria-label="Search" />
                     </form>
                     {/* <button className="mybtn"><Link to="/">Sign-in</Link></button> */}
