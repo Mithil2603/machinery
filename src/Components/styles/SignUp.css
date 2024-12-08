@@ -1,0 +1,12 @@
+.form-control {
+    border-color: gray;
+}
+
+.form-control:focus {
+    border-color: black;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: .25em;
+    border-color: black;
+}

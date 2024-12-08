@@ -57,13 +57,6 @@ export default function LandingPage() {
     }
   };
 
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-
-  useEffect(() => {
-    // Update current year on component mount
-    setCurrentYear(new Date().getFullYear());
-  }, []);
-
   return (
     <>
       <div className="container-fluid">
@@ -75,9 +68,15 @@ export default function LandingPage() {
               creels, designed to bring out your individuality and cater to your
               sense of style.
             </p>
-            <button className="mybtn2">
-              <Link to="/">Shop Now</Link>
-            </button>
+            <div className="mobile d-flex flex-wrap gap-3 align-items-center">
+              <Link to="/products">
+                <button className="mybtn2">Shop Now</button>
+              </Link>
+
+              <Link to="/signup">
+                <button className="mybtn2">SignUp</button>
+              </Link>
+            </div>
             <div className="d-flex mt-5">
               <div>
                 <div className="text-center numbers">50+</div>
@@ -119,7 +118,7 @@ export default function LandingPage() {
               <div className="row align-items-center justify-content-center text-center text-md-start margin-auto">
                 {/* Heading Section */}
                 <div className="col-12 col-md-6 mb-4 mb-md-0">
-                  <h1 className="display-5 fw-bold">
+                  <h1 className="display-5 fw-bold text-center">
                     Have a Question? We're Here to Help!
                   </h1>
                 </div>
@@ -159,43 +158,6 @@ export default function LandingPage() {
               </div>
             </div>
           </footer>
-        </div>
-      </div>
-      <div className="container-fluid bottom-shadow">
-        <div className="container company-info d-flex justify-content-between align-items-center gap-3 mt-5 flex-wrap">
-          <div className="about">
-            <h3 className="navbar-brand main-title font-2x">
-              RADHE ENTERPRISE
-            </h3>
-            <p>
-              We have creels that helps your business to make reach new heights.
-            </p>
-          </div>
-          <div className="links">
-            <h5 className="mb-3">COMPANY</h5>
-            <p>About</p>
-            <p>Features</p>
-            <p>Works</p>
-            <p>Career</p>
-          </div>
-          <div className="links">
-            <h5 className="mb-3">Help</h5>
-            <p>Customer Support</p>
-            <p>Delivery Details</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-          </div>
-        </div>
-        <div className="copyright d-flex flex-wrap justify-content-between align-items-center px-5 gap-3">
-          <div>
-            © 2012 - {currentYear} Radhe Enterprise Pvt. Ltd. All Rights Reserved
-          </div>
-          <div className="me">
-            Developed By{" "}
-            <Link to="https://www.instagram.com/mithil__suthar/">
-               Mithil Suthar
-            </Link>
-          </div>
         </div>
       </div>
     </>

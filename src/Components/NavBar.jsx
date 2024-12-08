@@ -15,7 +15,7 @@ export default function NavBar() {
   return (
     <>
         <div className="first-offer d-flex align-items-center gap-3">
-        <p>Sign up and get 20% off on your first order. <Link to="/">Sign Up Now</Link></p>
+        <p>Sign up and get 20% off on your first order. <Link to="/signup">Sign Up Now</Link></p>
         <p className="close" onClick={closeOffer}>
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-x"
                 viewBox="0 0 16 16">
@@ -24,7 +24,7 @@ export default function NavBar() {
             </svg>
         </p>
     </div>
-    <nav className="navbar navbar-expand-lg bg-body-nav shadow">
+    <nav className="navbar navbar-expand-lg bg-body-nav shadow w-100">
         <div className="container">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -43,16 +43,8 @@ export default function NavBar() {
                             Our Products
                         </Link>
                         <ul className="dropdown-menu">
-                            <li><Link className="dropdown-item" to="/">Action</Link></li>
-                            <li><Link className="dropdown-item" to="/">Another action</Link></li>
-                            <li>
-                                <hr className="dropdown-divider" />
-                            </li>
-                            <li><Link className="dropdown-item" to="/">Something else here</Link></li>
+                            <li><Link className="dropdown-item" to="/products">Creels</Link></li>
                         </ul>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">Link</Link>
                     </li>
                 </ul>
                 <div className="d-flex gap-3 align-items-center flex-wrap">

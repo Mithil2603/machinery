@@ -1,0 +1,18 @@
+.bold {
+    font-weight: bolder;
+}
+
+.card{
+    max-width: 20rem;
+    text-align: center;
+}
+
+.card-img-top {
+    max-width: 20rem;
+    min-height: 16.3rem;
+}
+
+.btn-full {
+    box-shadow: 1px 5px 5px black;
+    width: 100%;
+}
