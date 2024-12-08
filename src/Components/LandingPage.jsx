@@ -57,6 +57,13 @@ export default function LandingPage() {
     }
   };
 
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    // Update current year on component mount
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <>
       <div className="container-fluid">
@@ -109,7 +116,7 @@ export default function LandingPage() {
 
           <footer className="container-fluid bg-dark text-white py-5">
             <div className="container">
-              <div className="row align-items-center justify-content-center text-center text-md-start">
+              <div className="row align-items-center justify-content-center text-center text-md-start margin-auto">
                 {/* Heading Section */}
                 <div className="col-12 col-md-6 mb-4 mb-md-0">
                   <h1 className="display-5 fw-bold">
@@ -120,7 +127,7 @@ export default function LandingPage() {
                 <div className="col-12 col-md-6">
                   <form
                     onSubmit={handleSubmit}
-                    className="d-flex flex-column align-items-center"
+                    className="d-flex flex-column align-items-center margin-auto"
                   >
                     <input
                       type="email"
@@ -177,6 +184,17 @@ export default function LandingPage() {
             <p>Delivery Details</p>
             <p>Terms & Conditions</p>
             <p>Privacy Policy</p>
+          </div>
+        </div>
+        <div className="copyright d-flex flex-wrap justify-content-between align-items-center px-5 gap-3">
+          <div>
+            © 2012 - {currentYear} Radhe Enterprise Pvt. Ltd. All Rights Reserved
+          </div>
+          <div className="me">
+            Developed By{" "}
+            <Link to="https://www.instagram.com/mithil__suthar/">
+               Mithil Suthar
+            </Link>
           </div>
         </div>
       </div>

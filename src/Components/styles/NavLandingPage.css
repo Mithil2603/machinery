@@ -269,6 +269,7 @@ hr {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 3rem;
+    margin-top: 2rem;
 }
 
 .rating svg {
@@ -337,6 +338,10 @@ footer form button {
     max-width: inherit;
 }
 
+.margin-auto {
+    margin: auto;
+}
+
 .form-control:hover {
     background-color: white;
 }
@@ -362,4 +367,16 @@ footer form button {
 .bottom-shadow {
     box-sizing: border-box;
     border-top: 1px solid #000;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.copyright {
+    width: 100%;
+    min-height: 20%;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
 }
